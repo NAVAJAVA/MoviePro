@@ -8,14 +8,17 @@
 //------------------------------------------------------------------------------
 
 namespace MoviePro.Models
+
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
     
     public partial class People
     {
         public int CustomerId { get; set; }
         public string CustomerName { get; set; }
+        [Required(ErrorMessage = "Requited" )]
         public string Address { get; set; }
         public string City { get; set; }
         public string Email { get; set; }
